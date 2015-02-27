@@ -31,19 +31,19 @@ try:
                print show_data['show_name']
 
     if dag == "Sunday":
-       print "Maandag:"
+       print "Monday:"
     if dag == "Monday":
-       print "Dinsdag:"
+       print "Tuesdayg:"
     if dag == "Tuesday":
-       print "Woensdag:"
+       print "Wednesday:"
     if dag == "Wednesday":
-       print "Donderdag:"
+       print "Thursday:"
     if dag == "Thursday":
-      print "Vrijdag:"
+      print "Friday:"
     if dag == "Friday":	
-      print "Zaterdag:"
+      print "Saturday:"
     if dag == "Saturday":
-      print "Zondag:"
+      print "Sunday:"
 
     for show_data in tv_shows['data']['today']:
         if tmp.__contains__(show_data['show_name']): 
