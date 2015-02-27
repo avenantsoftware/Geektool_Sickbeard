@@ -17,31 +17,39 @@ request = Request('http://' + sburl + ':' + sbport + '/api/' + apikey + '/?cmd=f
 # shows you want to hide from displaying
 keywords = ['Seriename']
 
+tmp = []
+
 try:
     response = urlopen(request)
     tv_shows = json.loads(response.read())
     for show_data in tv_shows['data']['missed']:
-        if 'show_name' in show_data:
+        if tmp.__contains__(show_data['show_name']): 
+           continue
+        else:
+           tmp.append(show_data['show_name'])
            if not any(word in show_data['show_name'] for word in keywords):
                print show_data['show_name']
 
-    if day == "Sunday":
-       print "Monday:"
-    if day == "Monday":
-       print "Tuesday:"
-    if day == "Tuesday":
-       print "Wednesay:"
-    if day == "Wednesday":
-       print "Thursday:"
-    if day == "Thursday":
-      print "Friday:"
-    if day == "Friday":	
-      print "Saturday:"
-    if day == "Saturday":
-      print "Sunday:"
+    if dag == "Sunday":
+       print "Maandag:"
+    if dag == "Monday":
+       print "Dinsdag:"
+    if dag == "Tuesday":
+       print "Woensdag:"
+    if dag == "Wednesday":
+       print "Donderdag:"
+    if dag == "Thursday":
+      print "Vrijdag:"
+    if dag == "Friday":	
+      print "Zaterdag:"
+    if dag == "Saturday":
+      print "Zondag:"
 
     for show_data in tv_shows['data']['today']:
-        if 'show_name' in show_data:
+        if tmp.__contains__(show_data['show_name']): 
+           continue
+        else:
+           tmp.append(show_data['show_name'])  
            if not any(word in show_data['show_name'] for word in keywords):
               print show_data['show_name']
 
