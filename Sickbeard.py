@@ -31,19 +31,19 @@ try:
                print show_data['show_name']
     
     # display days one day later because series are downloadable usualy a day later then they are broadcasted, so you have a tv guide when the shows will be downloaded instead of broadcasted
-    if dag == "Sunday":
+    if day == "Sunday":
        print "Monday:"
-    if dag == "Monday":
+    if day == "Monday":
        print "Tuesdayg:"
-    if dag == "Tuesday":
+    if day == "Tuesday":
        print "Wednesday:"
-    if dag == "Wednesday":
+    if day == "Wednesday":
        print "Thursday:"
-    if dag == "Thursday":
+    if day == "Thursday":
       print "Friday:"
-    if dag == "Friday":	
+    if day == "Friday":	
       print "Saturday:"
-    if dag == "Saturday":
+    if day == "Saturday":
       print "Sunday:"
 
     for show_data in tv_shows['data']['today']:
