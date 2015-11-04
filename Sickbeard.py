@@ -29,7 +29,8 @@ try:
            tmp.append(show_data['show_name'])
            if not any(word in show_data['show_name'] for word in keywords):
                print show_data['show_name']
-
+    
+    # display days one day later because series are downloadable usualy a day later then they are broadcasted, so you have a tv guide when the shows will be downloaded instead of broadcasted
     if dag == "Sunday":
        print "Monday:"
     if dag == "Monday":
